@@ -15,8 +15,8 @@ The goal of this project is to predict if an ad posted on Facebook is political 
 **Note** - To reproduce this project you must download and extract the CSV yourself
 
 I will deliver the following:
-  * A [wrangle.py]() module that prepares the data for analysis
-  * A [Final Project notebook]() that details every step of this project.
+  * A [wrangle.py](https://github.com/datastraine/facebook-adobserver./blob/main/wrangle.py) module that prepares the data for analysis
+  * A [AdAnalysis](https://github.com/datastraine/facebook-adobserver./blob/main/AdAnalysis.ipynb) that details every step of this project.
   * A 5-minute presentation about the project, including slides.
   * A [Data Dictionary](#data-dictionary) for data used in this project.
   
@@ -54,7 +54,7 @@ For hypothesis testing we conducted Two Sample; Two Tail T-test on our features 
 
 * **Impressions**
   - $H0$ The average impressions of political ads is the same as the average impressions for non-political ads
-  - $Ha$ The average impressions of political ads is less than the average impressions for non-political ads
+  - $Ha$ The average impressions of political ads is not the same as the average impressions for non-political ads
 
 * **Ad Length**
   - $H0$ The average ad length of political ads is the same as the average ad length for non-political ads
@@ -86,7 +86,6 @@ While the our BoW on the full ad feature worked really well, there is always roo
 
 * Remove the following words from the full_ad feature: **need', 'help', 'trump', 'today', 'make', 'right', and people**
 * See if AdObserver users political_score has any bearing on whether an ad is political or not
-* Attempt to come up with a probability range for each ad whether it is political or not
 * Create a contains_candidate feature where true if a political candidate's name is mentioned in full_ad 
 * See if combining BoW features with other features improves the model
 * See if there are any clusters of features that may identify political ads
@@ -104,8 +103,8 @@ While the our BoW on the full ad feature worked really well, there is always roo
 | updated_at  | The date and time that an ad was last seen  |
 | known_ad_time  | The number of days an ad was known to run. Adds a day to account for when the ad was first seen  |
 | impressions  | The number of time an ad was seen  |
-| political_score  | The difference between a the user raiting of political and not_political  |
+| political_score  | The difference between a the user rating of political and not_political  |
 | advert_by  | Who published the ad  |
-| socio_political_fb | How facebook classifies an ad  |
+| socio_political_fb | How Facebook classifies an ad  |
 | message_length  | The number of words contained in an ad's message |
 | full_ad_length  |  The number of words contained in an ad's full_ad |
